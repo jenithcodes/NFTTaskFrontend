@@ -12,7 +12,7 @@ function App() {
     // Function to fetch NFTs
     const fetchNfts = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/nft');
+            const response = await axios.get('https://nft-task-backend.vercel.app/nft');
             setNfts(response.data);
         } catch (err) {
             setError(err.message);

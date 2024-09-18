@@ -20,7 +20,7 @@ const AddNft = ({ refreshNfts }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3001/upload', nft);
+            const response = await axios.post('https://nft-task-backend.vercel.app/upload', nft);
             setSuccess('NFT added successfully!');
             setError(null);
             setNft({ title: '', imageUrl: '', price: '' }); // Reset the form
